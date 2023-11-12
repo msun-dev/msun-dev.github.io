@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Contact
-permalink: /contact
+title: Links
+permalink: /links
 ---
 
-## Contact
+## Links
 
 Get in touch!
 

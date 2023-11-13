@@ -1,9 +1,9 @@
 ---
 layout: post
 is_post: true
-title: "----"
+title: "Начало блога и о знакомстве с Jekyll"
 date: 2023-11-10 00:00:00 +0500
-categories: blog personal
+categories: blog personal jekyll programming
 ---
 
 ...

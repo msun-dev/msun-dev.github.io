@@ -7,8 +7,6 @@ is_post: false
 
 ## Projects
 
-### Showcase-worthy projects starting from 2021.
+### Showcase-worthy projects starting from year 2021
 
-<form>
-  <!-- Form stuff -->
-</form>
+<hr>

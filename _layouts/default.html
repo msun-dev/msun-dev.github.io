@@ -9,16 +9,20 @@
 
 <body>
     <nav>
-        <ul class="nav-links">
-            <li><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
-            <li><a href="/projects" {% if page.title=="Projects" %}class="active-page" {% endif %}>Projects</a></li>
-            <li><a href="/blog" {% if page.title=="Blog" %}class="active-page" {% endif %}>Blog</a></li>
-            <li><a href="/links" {% if page.title=="Links" %}class="active-page" {% endif %}>Links</a></li>
-        </ul>
+        <li><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
+        <li><a href="/projects" {% if page.title=="Projects" %}class="active-page" {% endif %}>Projects</a></li>
+        <li><a href="/blog" {% if page.title=="Blog" %}class="active-page" {% endif %}>Blog</a></li>
+        <li><a href="/links" {% if page.title=="Links" %}class="active-page" {% endif %}>Links</a></li>
     </nav>
+
+    <hr>
+
     <main class="page-content">
         {{ content }}
     </main>
+
+    <hr>
+
     <footer>
         By msun_ and Jekyll. 2023.
     </footer>

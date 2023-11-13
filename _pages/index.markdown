@@ -4,11 +4,7 @@ permalink: /
 layout: default
 ---
 
-## Projects showcase
-
-Under construction
-
-<hr>
+## About me
 
 ## Recent posts
 
@@ -18,3 +14,9 @@ Under construction
   {% endfor %}
   <li><a href="/blog" class="post-preview">Other posts</a></li>
 </ul>
+
+<hr>
+
+## Projects showcase
+
+Under construction

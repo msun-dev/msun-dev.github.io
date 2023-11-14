@@ -15,6 +15,9 @@ layout: default
 
 <hr>
 
-## Projects showcase
+## Recent projects
 
-Under construction
+<ul>
+    <li>Under construction</li>
+    <li><a href="/blog" class="post-preview">Other projects</a></li>
+</ul>

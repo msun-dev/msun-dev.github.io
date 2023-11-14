@@ -5,6 +5,8 @@ permalink: /projects
 is_post: false
 ---
 
-## Projects
+## Projects showcase
 
 ### Showcase-worthy projects starting from year 2021
+
+Under construction

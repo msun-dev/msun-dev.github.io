@@ -10,6 +10,7 @@ permalink: /blog
 {% assign years = years | push: year %}
 {% endfor %}
 {% assign years = years | uniq | join: ", " %}
+{% assign years = years | split: ", " %}
 
 ## Blog
 

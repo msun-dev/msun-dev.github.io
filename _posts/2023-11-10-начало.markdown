@@ -3,7 +3,8 @@ layout: post
 is_post: true
 title: "Начало блога и о знакомстве с Jekyll, Ruby и Liquid"
 date: 2023-11-10 00:00:00 +0500
-categories: blog personal jekyll programming
+author: msun_
 ---
 
-...
+.ASfajsnfiujasnkcjnasicnkasnckjasnc iasnc iasnc iasn icnasincias icnaos nc;ew ncopeasn lned livneli nv
+ajnv iowenv ionweoiv nweoinv owienb

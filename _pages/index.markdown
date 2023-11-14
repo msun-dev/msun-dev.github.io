@@ -13,8 +13,6 @@ layout: default
   <li><a href="/blog" class="post-preview">Other posts</a></li>
 </ul>
 
-<hr>
-
 ## Recent projects
 
 <ul>

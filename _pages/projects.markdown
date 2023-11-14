@@ -8,5 +8,3 @@ is_post: false
 ## Projects
 
 ### Showcase-worthy projects starting from year 2021
-
-<hr>

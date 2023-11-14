@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +10,31 @@
 </head>
 
 <body>
+    <header>
+        <h1>msun_</h1>
+    </header>
+
+
     <nav>
-        <li><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
-        <li><a href="/projects" {% if page.title=="Projects" %}class="active-page" {% endif %}>Projects</a></li>
-        <li><a href="/blog" {% if page.title=="Blog" %}class="active-page" {% endif %}>Blog</a></li>
-        <li><a href="/links" {% if page.title=="Links" %}class="active-page" {% endif %}>Links</a></li>
+        <li class="nav"><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
+        <li class="nav"><a href="/projects" {% if page.title=="Projects" %}class="active-page" {% endif %}>Projects</a>
+        </li>
+        <li class="nav"><a href="/blog" {% if page.title=="Blog" %}class="active-page" {% endif %}>Blog</a></li>
+        <li class="nav"><a href="/links" {% if page.title=="Links" %}class="active-page" {% endif %}>Links</a></li>
     </nav>
 
     <hr>
 
-    <main class="page-content">
-        {{ content }}
+    <main>
+        <div class="page-content">
+            {{ content }}
+        </div>
     </main>
 
     <hr>
 
     <footer>
-        By msun_ and Jekyll. 2023.
+        By msun_ with power of Jekyll. 2023.
     </footer>
 </body>
 

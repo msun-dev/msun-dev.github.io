@@ -9,6 +9,4 @@ is_post: false
 
 ### List of links to my other pages/shmages/portfolios/etc
 
-<hr>
-
 Under construction

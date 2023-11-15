@@ -16,16 +16,15 @@ permalink: /blog
 
 ### Posts about anything and nothing at the same time
 
-<ul>
 {% for year in years %}
-<li><b>{{ year }}</b></li>
+<b>{{ year }}</b>
 {% for post in site.posts %}
+
   <ul>
   {% assign postYear = post.date | date: "%Y"%}
   {% if year ==  postYear %}
-    <li>{{ post.date | date: "%m.%d" }} - <a href="{{ post.url }}" class="post-preview">{{ post.title }}</a></li>
+    <li>{{ post.date | date: "%m-%d" }} - <a href="{{ post.url }}" class="post-preview">{{ post.title }}</a></li>
   {% endif %}
   </ul>
 {% endfor%}
 {% endfor %}
-</ul>

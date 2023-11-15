@@ -1,0 +1,47 @@
+# - name:
+#   date:
+#   type:
+#   description:
+#   image: /assets/images/projects/
+#   link:
+#   link-blog:
+
+- name: dotaConfigs
+  year: 2023
+  type: Java project
+  description: Everything that creates and uses Dota2 Configurations files. Get weekly-update hero grids with information like pickrates, winrates, etc. directly in your game client.
+  image:
+  link: https://github.com/stars/msun-dev/lists/dotaconfigs
+  link-blog:
+
+- name: Vib-Ribbon
+  year: 2023
+  type: 3D Art
+  description: One of the first 3D arts that were made with BlockBench.
+  image: /assets/images/projects/vibri.png
+  link: https://skfb.ly/oLLn8
+  link-blog:
+
+- name: Spiky Situation
+  year: 2022
+  type: Game
+  description: Hypercasual game where you play as bird and should tap the screen to dodge spikes. It was made at 3AM in 2.5 hours.
+  image: /assets/images/projects/spikes.png
+  link: https://msun.itch.io/spiky-situatuion
+  link-blog:
+
+- name: Rocket Dodger
+  year: 2021
+  type: Game
+  description: Arcade game where you dodge rockets and score points for every exploded one.
+  image:
+  link: https://msun.itch.io/rocket-dodger
+  link-blog:
+
+- name: Jumpy Adventure
+  year: 2021
+  type: Game
+  description: Platformer where you should reach the top of the Laboratory. Very hard game that even I couldn't complete.
+  image:
+  link: https://msun.itch.io/jmpadvnt
+  link-blog:

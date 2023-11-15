@@ -14,10 +14,18 @@
   link: https://github.com/stars/msun-dev/lists/dotaconfigs
   link-blog:
 
+- name: Repository with Godot projects
+  year: 2023
+  type: Repository
+  description: Collection of Godot project - games, animations, MVPs. Constantly updated.
+  image:
+  link: https://github.com/msun-dev/godot_random_projects
+  link-blog:
+
 - name: Vib-Ribbon
   year: 2023
   type: 3D Art
-  description: One of the first 3D arts that were made with BlockBench.
+  description: One of the first 3D models that were made in BlockBench.
   image: /assets/images/projects/vibri.png
   link: https://skfb.ly/oLLn8
   link-blog:

@@ -25,11 +25,15 @@ layout: default
         <img src="assets/images/projects/noImage.png">
         {% endif %}
         <div class="project-text">
-        <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }} - <a href="{{ project.link }}">Link</a><br>
+        <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }}
         <p> {{ project.description }}</p>
+        <a href="{{ project.link }}">Link</a>
+        {% if project.link-blog %}
+         - <a href="{{ project.link-blog }}">Link to post</a>
+        {% endif %}
         </div>
       </div>
     </li>
     {% endfor %}
-    <!-- <li><a href="/blog" class="post-preview">Other projects</a></li> -->
+    <a href="/blog" class="post-preview" style="position :center">Other projects</a>
 </ul>

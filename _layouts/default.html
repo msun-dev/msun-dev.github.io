@@ -16,10 +16,9 @@
 
 
     <nav>
-        <li class="nav"><a href="/" {% if page.title=="Home" %}class="active-page" {% endif %}>Home</a></li>
-
-        <li class="nav"><a href="/blog" {% if page.title=="Blog" %}class="active-page" {% endif %}>Blog</a></li>
-        <li class="nav"><a href="/projects" {% if page.title=="Projects" %}class="active-page" {% endif %}>Projects</a>
+        <li class="nav"><a href="/" {% if page.title=="Home" %} class="active-page" {% endif %}>Home</a></li>
+        <li class="nav"><a href="/blog" {% if page.title=="Blog" %} class="active-page" {% endif %}>Blog</a></li>
+        <li class="nav"><a href="/projects" {% if page.title=="Projects" %} class="active-page" {% endif %}>Projects</a>
         </li>
         <li class="nav"><a href="/links" {% if page.title=="Links" %}class="active-page" {% endif %}>Links</a></li>
     </nav>

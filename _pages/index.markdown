@@ -8,10 +8,10 @@ layout: default
 
 <ul>
   {% for post in site.posts limit:5 %}
-  <li>{{ post.date | date: "%Y-%m-%d" }} - <a href="{{ post.url }}" class="post-preview">{{ post.title }}</a></li>
+  <li>{{ post.date | date: "%Y-%m-%d" }} - <a href="{{ post.url }}" class="post-preview"  target="_blank">{{ post.title }}</a></li>
   {% endfor %}
-  <li><a href="/blog" class="post-preview">Other posts</a></li>
 </ul>
+<center><a href="/blog">Other posts</a></center>
 
 ## Recent projects
 
@@ -27,13 +27,13 @@ layout: default
         <div class="project-text">
         <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }}
         <p> {{ project.description }}</p>
-        <a href="{{ project.link }}">Link</a>
+        <a href="{{ project.link }}" target="_blank">Link</a>
         {% if project.link-blog %}
-         - <a href="{{ project.link-blog }}">Link to post</a>
+         - <a href="{{ project.link-blog }}" target="_blank">Link to post</a>
         {% endif %}
         </div>
       </div>
     </li>
     {% endfor %}
-    <a href="/blog" class="post-preview" style="position :center">Other projects</a>
+    <center><a href="/blog">Other projects</a></center>
 </ul>

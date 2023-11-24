@@ -13,3 +13,8 @@ a:hover {
 a:active {
     color: var(--primary-color);
 }
+
+a.active-page {
+    color: var(--text-color);
+    text-decoration: none;
+}

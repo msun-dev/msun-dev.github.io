@@ -9,3 +9,5 @@ layout: default
     </header>
     {{ content }}
 </article>
+
+<center><a href="/blog">Back to other posts</a></center>

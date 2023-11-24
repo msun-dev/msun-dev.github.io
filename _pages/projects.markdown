@@ -21,13 +21,12 @@ is_post: false
         <div class="project-text">
         <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }}
         <p> {{ project.description }}</p>
-        <a href="{{ project.link }}">Link</a>
+        <a href="{{ project.link }}" target="_blank">Link</a>
         {% if project.link-blog %}
-         - <a href="{{ project.link-blog }}">Link to post</a>
+         - <a href="{{ project.link-blog }}" target="_blank">Link to post</a>
         {% endif %}
         </div>
       </div>
     </li>
     {% endfor %}
-    <li><a href="/blog" class="post-preview">Other projects</a></li> 
 </ul>

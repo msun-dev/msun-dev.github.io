@@ -3,6 +3,11 @@ layout: default
 ---
 
 <article id="post">
+    {% if page.disclaimer %}
+        {% for disclaimer in page.disclaimer %}
+            {% include {{ disclaimer | append: ".html" }}  %}
+        {% endfor %}
+    {% endif %}
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-date">{{ page.date | date: "%b %-d, %Y" }}</div>

@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ 'fav.png' | relative_url }}">
 </head>
 
 <body>
@@ -18,6 +19,7 @@
     <nav>
         <li class="nav"><a href="/" {% if page.title=="Home" %} class="active-page" {% endif %}>Home</a></li>
         <li class="nav"><a href="/blog" {% if page.title=="Blog" %} class="active-page" {% endif %}>Blog</a></li>
+        <li class="nav"><a href="/comic" {% if page.title=="Comic" %} class="active-page" {% endif %}>Comic</a></li>
         <li class="nav"><a href="/projects" {% if page.title=="Projects" %} class="active-page" {% endif %}>Projects</a>
         </li>
         <li class="nav"><a href="/links" {% if page.title=="Links" %}class="active-page" {% endif %}>Links</a></li>

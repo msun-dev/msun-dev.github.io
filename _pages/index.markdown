@@ -35,5 +35,5 @@ layout: default
       </div>
     </li>
     {% endfor %}
-    <center><a href="/blog">Other projects</a></center>
+    <center><a href="/projects">Other projects</a></center>
 </ul>

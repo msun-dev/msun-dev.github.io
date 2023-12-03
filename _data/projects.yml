@@ -1,10 +1,18 @@
 # - name:
-#   date:
+#   year:
 #   type:
 #   description:
 #   image: /assets/images/projects/
 #   link:
 #   link-blog:
+
+- name: Okayga - The suika game
+  year: 2023
+  type: Puzzle game
+  description: Try to stack as much eggs as possible before you run out of space!
+  image: /assets/images/projects/okayga.png
+  link: https://msun.itch.io/okayga
+  link-blog:
 
 - name: dotaConfigs
   year: 2023
@@ -42,7 +50,7 @@
   year: 2021
   type: Game
   description: Arcade game where you dodge rockets and score points for every exploded one.
-  image:
+  image: /assets/images/projects/dodger.png
   link: https://msun.itch.io/rocket-dodger
   link-blog:
 
@@ -50,6 +58,6 @@
   year: 2021
   type: Game
   description: Platformer where you should reach the top of the Laboratory. Very hard game that even I couldn't complete.
-  image:
+  image: /assets/images/projects/advent.png
   link: https://msun.itch.io/jmpadvnt
   link-blog:

@@ -20,11 +20,11 @@ permalink: /blog
 <b>{{ year }}</b>
 {% for post in site.posts %}
 
-  <ul>
-  {% assign postYear = post.date | date: "%Y"%}
-  {% if year ==  postYear %}
-    <li>{{ post.date | date: "%m-%d" }} - <a href="{{ post.url }}" class="post-preview">{{ post.title }}</a></li>
-  {% endif %}
-  </ul>
+{% assign postYear = post.date | date: "%Y"%}
+{% if year ==  postYear %}
+
+<div>{{ post.date | date: "%b. %d"  }} - <a href="{{ post.url }}" class="post-preview">{{ post.title }}</a></div>
+{% endif %}
+
 {% endfor%}
 {% endfor %}

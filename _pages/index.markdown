@@ -20,9 +20,9 @@ layout: default
     <li>
       <div class="project-card">
         {% if project.image %}
-        <img src="{{ project.image }}">
+        <img src="{{ project.image }}" class="project-image">
         {% else %}
-        <img src="assets/images/projects/noImage.png">
+        <img src="assets/images/projects/noImage.png" class="project-image">
         {% endif %}
         <div class="project-text">
         <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }}
@@ -37,3 +37,7 @@ layout: default
     {% endfor %}
     <center><a href="/projects">Other projects</a></center>
 </ul>
+
+<script>
+  console.log("And?");
+</script>

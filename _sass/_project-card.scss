@@ -1,5 +1,6 @@
 ul.projects{
     padding: 0px;
+    list-style: none;
 }
 
 .project-card {
@@ -7,13 +8,16 @@ ul.projects{
     align-items: center;
 }
 
-.project-card img {
-    max-height: 100%;
-    scale: 75%;
+.project-card img.project-image{
+    display: inline;
+    width: 150px;
+    align-self: center;
+    aspect-ratio: 1/1 auto;
     float: left;
 }
 
 .project-text{
+    display: inline;
     padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
 	flex: 1 0 50%;
 }

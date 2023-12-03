@@ -20,6 +20,7 @@ header {
 }
 
 footer {
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -27,6 +28,6 @@ hr {
     color: var(--background-color);
 }
 
-ul.projects{
-    list-style: none;
+img {
+    filter: grayscale(100%);
 }

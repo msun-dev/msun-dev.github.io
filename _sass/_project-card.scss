@@ -9,6 +9,7 @@ ul.projects{
 }
 
 .project-card img.project-image{
+    image-rendering: auto;
     display: inline;
     width: 150px;
     align-self: center;

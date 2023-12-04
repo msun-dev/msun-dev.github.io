@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jekyll - Создание дисклеймера для постов - msun_</title>
+    <link rel="icon" type="image/png" sizes="250x250" href="/assets/images/favicon.png">
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>msun_</h1>
+        </header>
+
+
+        <nav>
+            <li class="nav"><a href="/" >Home</a></li>
+            <li class="nav"><a href="/blog" >Blog</a></li>
+            <li class="nav"><a href="/comic" >Comic</a></li>
+            <li class="nav"><a href="/projects" >Projects</a>
+            </li>
+            <li class="nav"><a href="/links" >Links</a></li>
+            <li class="nav"><button onclick="toggleNight()">Toggle night</button></li>
+        </nav>
+
+        <hr>
+
+        <main>
+            <div class="page-content">
+                <article id="post">
+        
+    <header class="post-header">
+        <h1 class="post-title">Jekyll - Создание дисклеймера для постов</h1>
+        <div class="post-date">Dec 4, 2023</div>
+    </header>
+    <h3 id="финальный-результат">Финальный результат:</h3>
+
+<div class="disclaimer">
+    <p><i> Пример дисклеймера. В статье вы научитесь создавать кастомизируемые дисклеймеры для Jekyll-блога. </i></p>
+</div>
+
+<h3 id="как-это-устроено">Как это устроено</h3>
+
+<p>Jekyll поддерживает include файлы, которые представляют из себя кусок html файла, которй в свою очередь можно использовать в любом месте в .md файлах используя язык шаблонов Liquid.</p>
+
+<p>Для начала нужно создать папку “_includes” и в ней же создать файл “disclaimer.html”.
+В файле расположить этот код:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"disclaimer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;i&gt;</span> {{ include.text }} <span class="nt">&lt;/i&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>“div” тэг может быть абсолютно любым, самое главное добавить <br /> {{ include.text }}  переменную.
+Также можно добавить другие переменные по типу  {{ include.имя_переменной }} . Например ссылку на изображение для  <img />  тэга и тд и тп.</p>
+
+<p>Теперь в этой же папке (“_includes”) можно создавать сами дисклеймеры с расширением .html. Пример дисклеймера:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% include disclaimer.html
+text="I'm too lazy to translate this article.<span class="nt">&lt;br&gt;</span> Too bad!"
+%}</code></pre></figure>
+
+<p>В этом файле мы генерируем уже полный html-код дисклеймера с text переменной.
+В самом сайте код этого шаблона будет выглядеть так:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"disclaimer"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;i&gt;</span> I'm too lazy to translate this article.<span class="nt">&lt;br&gt;</span> Too bad! <span class="nt">&lt;/i&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h3 id="как-использовать">Как использовать</h3>
+
+<p>Чтобы было проще использовать дисклеймеры в блог-постах я сделал специальную переменную массива в шаблоне поста: “disclaimer: []”
+и добавил кусок кода, который добавляет каждый дисклеймер в пост из пременной “disclaimer”. В самом посте остается
+добавить название дисклеймеров, которые хотите использовать.</p>
+
+<p>Код, добавленный в “/_layouts/posts.md”, который добавляет дисклеймеры:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">{% for disclaimer in page.disclaimer %}
+    {% include {{ disclaimer | append: ".html" }}  %}
+{% endfor %}</code></pre></figure>
+
+<p>Этот код проходит по массиву disclaimer и добавляет каждый ранее созданный нами дисклеймер в наш блог-пост. 
+При добавлении переменной дисклеймера в пост писать расширение не нужно - код делает это за нас.</p>
+
+<p>Удачи!</p>
+
+</article>
+
+<center><a href="/blog">Back to other posts</a></center>
+
+            </div>
+        </main>
+
+
+
+        <footer>
+            <hr>
+            By msun_ with power of Jekyll. 2023.
+        </footer>
+    </div>
+</body>
+
+<script>
+    let night_theme = ((localStorage.getItem("night_theme") || "false") === 'true');
+    if (night_theme == true) {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+    }
+    function toggleNight() {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+        night_theme = !night_theme;
+        localStorage.setItem("night_theme", night_theme);
+    }
+</script>
+
+</html>

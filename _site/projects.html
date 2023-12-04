@@ -11,25 +11,27 @@
 </head>
 
 <body>
-    <header>
-        <h1>msun_</h1>
-    </header>
+    <div>
+        <header>
+            <h1>msun_</h1>
+        </header>
 
 
-    <nav>
-        <li class="nav"><a href="/" >Home</a></li>
-        <li class="nav"><a href="/blog" >Blog</a></li>
-        <li class="nav"><a href="/comic" >Comic</a></li>
-        <li class="nav"><a href="/projects"  class="active-page" >Projects</a>
-        </li>
-        <li class="nav"><a href="/links" >Links</a></li>
-    </nav>
+        <nav>
+            <li class="nav"><a href="/" >Home</a></li>
+            <li class="nav"><a href="/blog" >Blog</a></li>
+            <li class="nav"><a href="/comic" >Comic</a></li>
+            <li class="nav"><a href="/projects"  class="active-page" >Projects</a>
+            </li>
+            <li class="nav"><a href="/links" >Links</a></li>
+            <li class="nav"><button onclick="toggleNight()">Toggle night</button></li>
+        </nav>
 
-    <hr>
+        <hr>
 
-    <main>
-        <div class="page-content">
-            <h2 id="projects-showcase">Projects showcase</h2>
+        <main>
+            <div class="page-content">
+                <h2 id="projects-showcase">Projects showcase</h2>
 
 <h3 id="showcase-worthy-projects-starting-from-year-2021">Showcase-worthy projects starting from year 2021</h3>
 
@@ -135,15 +137,28 @@
     
 </ul>
 
-        </div>
-    </main>
+            </div>
+        </main>
 
 
 
-    <footer>
-        <hr>
-        By msun_ with power of Jekyll. 2023.
-    </footer>
+        <footer>
+            <hr>
+            By msun_ with power of Jekyll. 2023.
+        </footer>
+    </div>
 </body>
+
+<script>
+    let night_theme = ((localStorage.getItem("night_theme") || "false") === 'true');
+    if (night_theme == true) {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+    }
+    function toggleNight() {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+        night_theme = !night_theme;
+        localStorage.setItem("night_theme", night_theme);
+    }
+</script>
 
 </html>

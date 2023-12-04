@@ -11,34 +11,40 @@
 </head>
 
 <body>
-    <header>
-        <h1>msun_</h1>
-    </header>
+    <div>
+        <header>
+            <h1>msun_</h1>
+        </header>
 
 
-    <nav>
-        <li class="nav"><a href="/" {% if page.title=="Home" %} class="active-page" {% endif %}>Home</a></li>
-        <li class="nav"><a href="/blog" {% if page.title=="Blog" %} class="active-page" {% endif %}>Blog</a></li>
-        <li class="nav"><a href="/comic" {% if page.title=="Comic" %} class="active-page" {% endif %}>Comic</a></li>
-        <li class="nav"><a href="/projects" {% if page.title=="Projects" %} class="active-page" {% endif %}>Projects</a>
-        </li>
-        <li class="nav"><a href="/links" {% if page.title=="Links" %}class="active-page" {% endif %}>Links</a></li>
-    </nav>
+        <nav>
+            <li class="nav"><a href="/" {% if page.title=="Home" %} class="active-page" {% endif %}>Home</a></li>
+            <li class="nav"><a href="/blog" {% if page.title=="Blog" %} class="active-page" {% endif %}>Blog</a></li>
+            <li class="nav"><a href="/comic" {% if page.title=="Comic" %} class="active-page" {% endif %}>Comic</a></li>
+            <li class="nav"><a href="/projects" {% if page.title=="Projects" %} class="active-page" {% endif
+                    %}>Projects</a>
+            </li>
+            <li class="nav"><a href="/links" {% if page.title=="Links" %} class="active-page" {% endif %}>Links</a></li>
+            <li class="nav"><button onclick="toggleNight()">Toggle night</button></li>
+        </nav>
 
-    <hr>
-
-    <main>
-        <div class="page-content">
-            {{ content }}
-        </div>
-    </main>
-
-
-
-    <footer>
         <hr>
-        By msun_ with power of Jekyll. 2023.
-    </footer>
+
+        <main>
+            <div class="page-content">
+                {{ content }}
+            </div>
+        </main>
+
+
+
+        <footer>
+            <hr>
+            By msun_ with power of Jekyll. 2023.
+        </footer>
+    </div>
 </body>
+
+{% include scripts/night_theme.html %}
 
 </html>

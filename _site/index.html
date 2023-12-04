@@ -11,32 +11,45 @@
 </head>
 
 <body>
-    <header>
-        <h1>msun_</h1>
-    </header>
+    <div>
+        <header>
+            <h1>msun_</h1>
+        </header>
 
 
-    <nav>
-        <li class="nav"><a href="/"  class="active-page" >Home</a></li>
-        <li class="nav"><a href="/blog" >Blog</a></li>
-        <li class="nav"><a href="/comic" >Comic</a></li>
-        <li class="nav"><a href="/projects" >Projects</a>
-        </li>
-        <li class="nav"><a href="/links" >Links</a></li>
-    </nav>
+        <nav>
+            <li class="nav"><a href="/"  class="active-page" >Home</a></li>
+            <li class="nav"><a href="/blog" >Blog</a></li>
+            <li class="nav"><a href="/comic" >Comic</a></li>
+            <li class="nav"><a href="/projects" >Projects</a>
+            </li>
+            <li class="nav"><a href="/links" >Links</a></li>
+            <li class="nav"><button onclick="toggleNight()">Toggle night</button></li>
+        </nav>
 
-    <hr>
+        <hr>
 
-    <main>
-        <div class="page-content">
-            <h2 id="recent-posts">Recent posts</h2>
+        <main>
+            <div class="page-content">
+                <h2 id="hello">Hello!</h2>
 
-<ul>
-  
-  <li>2023-11-10 - <a href="/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE" class="post-preview" target="_blank">Начало блога и о знакомстве с Jekyll, Ruby и Liquid</a></li>
-  
+<p>Doing things and writing about it.<br />
+Have fun exploring!</p>
+
+<hr />
+
+<h2 id="recent-posts">Recent posts</h2>
+
+<ul class="posts">
+
+  <li>2023 Dec. 04 - <a href="/blog/Disclaimers" class="post-preview">Jekyll - Создание дисклеймера для постов</a></li>
+
+  <li>2023 Nov. 10 - <a href="/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE" class="post-preview">Начало блога и о знакомстве с Jekyll, Ruby и Liquid</a></li>
+
 </ul>
-<center><a href="/blog">Other posts</a></center>
+<div><center><a href="/blog">Other posts</a></center></div>
+
+<hr />
 
 <h2 id="recent-projects">Recent projects</h2>
 
@@ -87,20 +100,28 @@
     <center><a href="/projects">Other projects</a></center>
 </ul>
 
-<script>
-  console.log("And?");
-</script>
-
-
-        </div>
-    </main>
+            </div>
+        </main>
 
 
 
-    <footer>
-        <hr>
-        By msun_ with power of Jekyll. 2023.
-    </footer>
+        <footer>
+            <hr>
+            By msun_ with power of Jekyll. 2023.
+        </footer>
+    </div>
 </body>
+
+<script>
+    let night_theme = ((localStorage.getItem("night_theme") || "false") === 'true');
+    if (night_theme == true) {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+    }
+    function toggleNight() {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+        night_theme = !night_theme;
+        localStorage.setItem("night_theme", night_theme);
+    }
+</script>
 
 </html>

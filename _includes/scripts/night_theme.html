@@ -1,0 +1,11 @@
+<script>
+    let night_theme = ((localStorage.getItem("night_theme") || "false") === 'true');
+    if (night_theme == true) {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+    }
+    function toggleNight() {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+        night_theme = !night_theme;
+        localStorage.setItem("night_theme", night_theme);
+    }
+</script>

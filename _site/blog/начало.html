@@ -11,32 +11,32 @@
 </head>
 
 <body>
-    <header>
-        <h1>msun_</h1>
-    </header>
+    <div>
+        <header>
+            <h1>msun_</h1>
+        </header>
 
 
-    <nav>
-        <li class="nav"><a href="/" >Home</a></li>
-        <li class="nav"><a href="/blog" >Blog</a></li>
-        <li class="nav"><a href="/comic" >Comic</a></li>
-        <li class="nav"><a href="/projects" >Projects</a>
-        </li>
-        <li class="nav"><a href="/links" >Links</a></li>
-    </nav>
+        <nav>
+            <li class="nav"><a href="/" >Home</a></li>
+            <li class="nav"><a href="/blog" >Blog</a></li>
+            <li class="nav"><a href="/comic" >Comic</a></li>
+            <li class="nav"><a href="/projects" >Projects</a>
+            </li>
+            <li class="nav"><a href="/links" >Links</a></li>
+            <li class="nav"><button onclick="toggleNight()">Toggle night</button></li>
+        </nav>
 
-    <hr>
+        <hr>
 
-    <main>
-        <div class="page-content">
-            <article id="post">
-    
+        <main>
+            <div class="page-content">
+                <article id="post">
         
             <div class="disclaimer">
     <p><i> I'm too lazy to translate this article.<br> Too bad! </i></p>
 </div>
         
-    
     <header class="post-header">
         <h1 class="post-title">Начало блога и о знакомстве с Jekyll, Ruby и Liquid</h1>
         <div class="post-date">Nov 10, 2023</div>
@@ -93,15 +93,28 @@ Ruby прежде всего высокоуровневый язык, цель �
 
 <center><a href="/blog">Back to other posts</a></center>
 
-        </div>
-    </main>
+            </div>
+        </main>
 
 
 
-    <footer>
-        <hr>
-        By msun_ with power of Jekyll. 2023.
-    </footer>
+        <footer>
+            <hr>
+            By msun_ with power of Jekyll. 2023.
+        </footer>
+    </div>
 </body>
+
+<script>
+    let night_theme = ((localStorage.getItem("night_theme") || "false") === 'true');
+    if (night_theme == true) {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+    }
+    function toggleNight() {
+        document.getElementsByTagName('body')[0].classList.toggle('night-theme');
+        night_theme = !night_theme;
+        localStorage.setItem("night_theme", night_theme);
+    }
+</script>
 
 </html>

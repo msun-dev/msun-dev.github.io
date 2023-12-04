@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-03T16:50:29+05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">msun_</title><subtitle>msun_ related blog. msun_ programming, talks about gamedev, big posts, artworks. Everything that is somewhat related to msun_.</subtitle><entry><title type="html">Начало блога и о знакомстве с Jekyll, Ruby и Liquid</title><link href="http://localhost:4000/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE" rel="alternate" type="text/html" title="Начало блога и о знакомстве с Jekyll, Ruby и Liquid" /><published>2023-11-10T00:00:00+05:00</published><updated>2023-11-10T00:00:00+05:00</updated><id>http://localhost:4000/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE</id><content type="html" xml:base="http://localhost:4000/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE">&lt;p&gt;Наконец-то после тонны потраченного времени (совсем не зря!) и выпитых энергетиков (может быть и зря….)с созданием основной части сайта покончено.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-04T21:27:00+05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">msun_</title><subtitle>msun_ related blog. msun_ programming, talks about gamedev, big posts, artworks. Everything that is somewhat related to msun_.</subtitle><entry><title type="html">Jekyll - Создание дисклеймера для постов</title><link href="http://localhost:4000/blog/Disclaimers" rel="alternate" type="text/html" title="Jekyll - Создание дисклеймера для постов" /><published>2023-12-04T00:00:00+05:00</published><updated>2023-12-04T00:00:00+05:00</updated><id>http://localhost:4000/blog/Disclaimers</id><content type="html" xml:base="http://localhost:4000/blog/Disclaimers">&lt;h3 id=&quot;финальный-результат&quot;&gt;Финальный результат:&lt;/h3&gt;
+
+&lt;div class=&quot;disclaimer&quot;&gt;
+    &lt;p&gt;&lt;i&gt; Пример дисклеймера. В статье вы научитесь создавать кастомизируемые дисклеймеры для Jekyll-блога. &lt;/i&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;как-это-устроено&quot;&gt;Как это устроено&lt;/h3&gt;
+
+&lt;p&gt;Jekyll поддерживает include файлы, которые представляют из себя кусок html файла, которй в свою очередь можно использовать в любом месте в .md файлах используя язык шаблонов Liquid.&lt;/p&gt;
+
+&lt;p&gt;Для начала нужно создать папку “_includes” и в ней же создать файл “disclaimer.html”.
+В файле расположить этот код:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;disclaimer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;i&amp;gt;&lt;/span&gt; {{ include.text }} &lt;span class=&quot;nt&quot;&gt;&amp;lt;/i&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;“div” тэг может быть абсолютно любым, самое главное добавить &lt;br /&gt; {{ include.text }}  переменную.
+Также можно добавить другие переменные по типу  {{ include.имя_переменной }} . Например ссылку на изображение для  &lt;img /&gt;  тэга и тд и тп.&lt;/p&gt;
+
+&lt;p&gt;Теперь в этой же папке (“_includes”) можно создавать сами дисклеймеры с расширением .html. Пример дисклеймера:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% include disclaimer.html
+text=&quot;I&apos;m too lazy to translate this article.&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt; Too bad!&quot;
+%}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;В этом файле мы генерируем уже полный html-код дисклеймера с text переменной.
+В самом сайте код этого шаблона будет выглядеть так:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;disclaimer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;i&amp;gt;&lt;/span&gt; I&apos;m too lazy to translate this article.&lt;span class=&quot;nt&quot;&gt;&amp;lt;br&amp;gt;&lt;/span&gt; Too bad! &lt;span class=&quot;nt&quot;&gt;&amp;lt;/i&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;как-использовать&quot;&gt;Как использовать&lt;/h3&gt;
+
+&lt;p&gt;Чтобы было проще использовать дисклеймеры в блог-постах я сделал специальную переменную массива в шаблоне поста: “disclaimer: []”
+и добавил кусок кода, который добавляет каждый дисклеймер в пост из пременной “disclaimer”. В самом посте остается
+добавить название дисклеймеров, которые хотите использовать.&lt;/p&gt;
+
+&lt;p&gt;Код, добавленный в “/_layouts/posts.md”, который добавляет дисклеймеры:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% for disclaimer in page.disclaimer %}
+    {% include {{ disclaimer | append: &quot;.html&quot; }}  %}
+{% endfor %}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Этот код проходит по массиву disclaimer и добавляет каждый ранее созданный нами дисклеймер в наш блог-пост. 
+При добавлении переменной дисклеймера в пост писать расширение не нужно - код делает это за нас.&lt;/p&gt;
+
+&lt;p&gt;Удачи!&lt;/p&gt;</content><author><name>msun_</name></author><summary type="html">Финальный результат:</summary></entry><entry><title type="html">Начало блога и о знакомстве с Jekyll, Ruby и Liquid</title><link href="http://localhost:4000/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE" rel="alternate" type="text/html" title="Начало блога и о знакомстве с Jekyll, Ruby и Liquid" /><published>2023-11-10T00:00:00+05:00</published><updated>2023-11-10T00:00:00+05:00</updated><id>http://localhost:4000/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE</id><content type="html" xml:base="http://localhost:4000/blog/%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE">&lt;p&gt;Наконец-то после тонны потраченного времени (совсем не зря!) и выпитых энергетиков (может быть и зря….)с созданием основной части сайта покончено.
 Не просто сайт, а сайт - портфолио, личный блог и к тому же страница с ссылками на всякие личные страницы.
 Также получена уйма знаний и умений работы с языками Ruby и Liquid, освежил знания в верстке страниц.
 Ну, и как водится, нужно рассказать о том, как все это происходило и с какими проблемами столкнулся (нужно же как-то документировать свои знания) и то, как я эти проблемы решал.&lt;/p&gt;

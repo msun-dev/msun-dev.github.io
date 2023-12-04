@@ -4,14 +4,23 @@ permalink: /
 layout: default
 ---
 
+## Hello!
+
+Doing things and writing about it.<br>
+Have fun exploring!
+
+<hr>
+
 ## Recent posts
 
-<ul>
-  {% for post in site.posts limit:5 %}
-  <li>{{ post.date | date: "%Y-%m-%d" }} - <a href="{{ post.url }}" class="post-preview"  target="_blank">{{ post.title }}</a></li>
-  {% endfor %}
+<ul class="posts">
+{% for post in site.posts limit:5 %}
+  <li>{{ post.date | date: "%Y %b. %d"  }} - <a href="{{ post.url }}" class="post-preview">{{ post.title }}</a></li>
+{% endfor %}
 </ul>
-<center><a href="/blog">Other posts</a></center>
+<div><center><a href="/blog">Other posts</a></center></div>
+
+<hr>
 
 ## Recent projects
 
@@ -37,7 +46,3 @@ layout: default
     {% endfor %}
     <center><a href="/projects">Other projects</a></center>
 </ul>
-
-<script>
-  console.log("And?");
-</script>

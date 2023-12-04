@@ -1,18 +1,15 @@
 * {
   box-sizing: border-box;
   line-height: 1.4;
-
   font-family: 'Helvetica';
+  image-rendering: pixelated;
 }
 
 body {
     max-width: 800px;
     margin: 0 auto;
     padding: 4rem 2rem;
-
     font-size: 18px;
-    color: var(--text-color);
-    background-color: var(--background-color);
 }
 
 header {
@@ -20,14 +17,20 @@ header {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 18px;
     text-align: center;
-}
-
-hr {
-    color: var(--background-color);
 }
 
 img {
     filter: grayscale(100%);
+}
+
+button {
+    padding: 0px;
+    font-size: 18px;
+    background-color: #00000000;
+    border: none;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: underline;
 }

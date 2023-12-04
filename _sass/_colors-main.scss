@@ -1,6 +1,20 @@
 :root {
-    --text-color:#black ;
-    --background-color:#white ;
-    --primary-color:#6e776e;
-    --accent-color:#676f67;
+    --primary-color:#808080;
+    --accent-color:#808080;
+}
+
+.default-theme {
+    color:#000000 ;
+    background-color:#ffffff ;
+}
+
+.night-theme {
+    color:#ffffff ;
+    background-color:#000000 ;
+    background-image: url("/assets/images/stars.gif");
+    background-size: 500px 500px;
+}
+
+.night-theme div{
+    background-color: black;
 }

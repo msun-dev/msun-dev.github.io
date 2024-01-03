@@ -6,6 +6,14 @@
 #   link:
 #   link-blog:
 
+- name: Low-poly female body wireframe
+  year: 2023
+  type: 3D Model
+  description: First 3D model made in Blender. It's only a wireframe, thought.
+  image: /assets/images/projects/fem-wireframe.png
+  link: https://skfb.ly/oPqvs
+  link-blog:
+
 - name: Okayga - The suika game
   year: 2023
   type: Puzzle game

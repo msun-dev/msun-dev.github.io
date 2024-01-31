@@ -2,7 +2,7 @@
 layout: post
 is_post: true
 title: "Blender или Blockbench? Курица или рыба? Го..."
-date: 2024-01-30 00:00:00 +0500
+date: 2024-02-30 00:00:00 +0500
 author: msun_
 intro-image:
 disclaimer: []

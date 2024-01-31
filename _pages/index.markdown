@@ -36,7 +36,11 @@ Have fun exploring!
         <div class="project-text">
         <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }}
         <p> {{ project.description }}</p>
-        <a href="{{ project.link }}" target="_blank">Link</a>
+        {% if project.link %}
+          <a href="{{ project.link }}" target="_blank">Link</a>
+        {% else %}
+          <b>WIP</b>
+        {% endif %}
         {% if project.link-blog %}
          - <a href="{{ project.link-blog }}" target="_blank">Link to post</a>
         {% endif %}

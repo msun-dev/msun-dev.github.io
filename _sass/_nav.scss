@@ -3,7 +3,11 @@ nav {
     text-align: center;
 }
 
-.nav{
+.nav {
     display: inline;
     margin-inline: 10px;
+}
+
+.nav *{
+    font-size: 18px;
 }

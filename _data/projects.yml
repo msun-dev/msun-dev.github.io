@@ -6,6 +6,14 @@
 #   link:
 #   link-blog:
 
+- name: "Self-Proclaimed Heroes!"
+  year: 2024
+  type: Arcade game
+  description: Submission to Mini Jam 152-Heroes. 2 little heroes got 2 new acessories and began to do Heroish things. 
+  image: /assets/images/projects/spheroes.png
+  link: https://msun.itch.io/self-proclaimed-heroes
+  link-blog:
+
 - name: "Bag full of pans"
   year: 2024
   type: Platformer game

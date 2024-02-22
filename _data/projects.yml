@@ -6,6 +6,14 @@
 #   link:
 #   link-blog:
 
+- name: discord_selenium_translator
+  year: 2024
+  type: Repository - Python project
+  description: Discord bot that translates messages of user and posts them in different channel
+  image:
+  link: https://github.com/msun-dev/discord_selenium_translator
+  link-blog:
+
 - name: "Self-Proclaimed Heroes!"
   year: 2024
   type: Arcade game
@@ -40,7 +48,7 @@
 
 - name: dotaConfigs
   year: 2023
-  type: Java project
+  type: Repository - Java project
   description: Everything that creates and uses Dota2 Configurations files. Get weekly-updated hero grids with information like pickrates, winrates, etc directly in your game client.
   image:
   link: https://github.com/stars/msun-dev/lists/dotaconfigs

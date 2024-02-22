@@ -7,7 +7,7 @@ is_post: false
 
 ## Projects showcase
 
-### Showcase-worthy projects starting from year 2021
+### Showcase-worthy projects starting from year 2021:
 
 <ul class="projects">
     {% for project in site.data.projects %}
@@ -19,7 +19,8 @@ is_post: false
         <img src="assets/images/projects/noImage.png" class="project-image">
         {% endif %}
         <div class="project-text">
-        <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }}
+        <b> {{ project.name }}</b> 
+        <p> {{ project.year }} - {{ project.type }} </p> 
         <p> {{ project.description }}</p>
         {% if project.link %}
           <a href="{{ project.link }}" target="_blank">Link</a>

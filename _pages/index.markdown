@@ -34,7 +34,8 @@ Have fun exploring!
         <img src="assets/images/projects/noImage.png" class="project-image">
         {% endif %}
         <div class="project-text">
-        <b> {{ project.name }}</b> - {{ project.type }} - {{ project.year }}
+        <b> {{ project.name }}</b> 
+        <p> {{ project.year }} - {{ project.type }} </p> 
         <p> {{ project.description }}</p>
         {% if project.link %}
           <a href="{{ project.link }}" target="_blank">Link</a>
